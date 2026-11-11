@@ -1,6 +1,6 @@
 """Check public top-level functions for a docstring and full type annotations.
 
-Usage (from the python/ folder):
+Usage (from the ex2/ folder):
     python tools/check_conventions.py <file.py> [more files ...]
 
 Prints one line per function that breaks the convention, then a summary of

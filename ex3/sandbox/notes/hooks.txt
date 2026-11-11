@@ -1,0 +1,1 @@
+Hooks note: a hook runs a command at a lifecycle event and reads its exit status.

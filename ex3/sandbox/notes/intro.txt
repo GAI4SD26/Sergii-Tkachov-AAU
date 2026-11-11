@@ -1,0 +1,2 @@
+Intro note: this folder holds the sample notes the lab server reads.
+Each note is a plain text file with a short line of content.
