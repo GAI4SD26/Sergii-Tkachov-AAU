@@ -4,7 +4,7 @@ Starter code for Exercise 4 and the convention checker. The solution is not incl
 
 ## Setup
 
-From this `python/` folder:
+From this `ex2/` folder:
 
     python -m pip install -r requirements.txt
 
