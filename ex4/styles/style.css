@@ -1,0 +1,61 @@
+* { box-sizing: border-box; }
+
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #23322a;
+  background: #f5f4ed;
+}
+
+body { margin: 0; min-width: 320px; }
+.game-shell { max-width: 1520px; margin: auto; padding: 0 6%; }
+.topbar { height: 88px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #dcded4; }
+.brand { color: #263b2e; text-decoration: none; font-weight: 850; font-size: 15px; letter-spacing: .12em; display: flex; align-items: center; gap: 8px; }
+.brand-mark { display: grid; place-items: center; width: 31px; height: 31px; background: #536e4d; color: white; border-radius: 9px; font-size: 17px; }
+.brand-light { color: #869283; font-weight: 500; margin-left: -5px; }
+.edition, .label, .eyebrow, .board-top, .board-bottom, footer, .control-number { font-size: 10px; font-weight: 750; letter-spacing: .13em; }
+.edition, .control-number { color: #98a293; }
+.game-layout { display: grid; grid-template-columns: minmax(270px, .75fr) minmax(440px, 1.25fr); gap: 7%; align-items: center; padding: 55px 0 62px; }
+.game-info { max-width: 410px; }
+.eyebrow { color: #678161; margin: 0 0 20px; }
+.live-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #a6bf78; margin-right: 7px; vertical-align: 1px; }
+h1 { font-family: Georgia, serif; font-size: clamp(44px, 5vw, 72px); font-weight: 400; line-height: .98; letter-spacing: -.055em; margin: 0 0 22px; }
+h1 em { color: #779269; font-weight: 400; }
+.intro { color: #788378; line-height: 1.7; max-width: 340px; font-size: 14px; margin: 0 0 28px; }
+.score-card { background: #e8ede1; border: 1px solid #dce5d5; border-radius: 14px; padding: 18px 22px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.label { color: #84937f; margin: 0; }
+.score { font-family: Georgia, serif; font-size: 42px; line-height: 1; margin: 10px 0 0; }
+.score-icon { font-size: 27px; color: #9bb18d; }
+button { width: 100%; border: 0; border-radius: 11px; background: #526e4e; color: white; padding: 16px 19px; font: inherit; font-size: 13px; font-weight: 700; text-align: left; cursor: pointer; }
+button span { float: right; font-size: 17px; line-height: 1; }
+button:hover { background: #3f5c3c; }
+button:focus-visible { outline: 3px solid #c3924c; outline-offset: 3px; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+[hidden] { display: none !important; }
+.status { min-height: 19px; color: #758373; font-size: 12px; margin: 11px 0 20px; }
+.error { color: #a5342b; font-size: 13px; }
+.controls { border-top: 1px solid #dcded4; padding-top: 21px; }
+.controls-heading { display: flex; justify-content: space-between; }
+.controls p:not(.label) { color: #788378; font-size: 12px; line-height: 1.6; }
+.key-guide { display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0; color: #71806d; font-size: 14px; }
+.key-guide span { display: inline-flex; align-items: center; gap: 4px; }
+kbd { display: inline-grid; place-items: center; width: 30px; height: 30px; border: 1px solid #d9dfd4; border-bottom-width: 3px; border-radius: 6px; background: #fff; color: #536e4d; font: inherit; font-weight: 700; }
+.controls-note { margin-bottom: 0; }
+.board-panel { min-width: 0; background: #e6ecdd; border: 1px solid #d5e0cc; border-radius: 21px; padding: 24px; box-shadow: 0 18px 55px #63795812; }
+.board-top, .board-bottom { display: flex; justify-content: space-between; color: #8a9e80; }
+.board-wrap { width: 100%; aspect-ratio: 1 / .87; display: grid; place-items: center; overflow: hidden; }
+.board-wrap canvas { display: block; width: 100%; height: 100%; }
+.board-bottom { border-top: 1px solid #d2dfc9; padding-top: 18px; font-size: 9px; }
+footer { border-top: 1px solid #dcded4; display: flex; justify-content: space-between; padding: 22px 0; color: #a0aa9c; font-size: 9px; }
+@media (max-width: 850px) {
+  .game-layout { grid-template-columns: 1fr; gap: 35px; padding-top: 35px; }
+  .game-info { max-width: none; }
+  .intro { max-width: 500px; }
+}
+@media (max-width: 500px) {
+  .game-shell { padding: 0 5%; }
+  .topbar { height: 68px; }
+  .edition { display: none; }
+  .board-panel { padding: 16px; }
+  .board-bottom { font-size: 8px; }
+}
